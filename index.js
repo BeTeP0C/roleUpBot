@@ -1,8 +1,8 @@
 const {Telegraf, Scenes: {BaseScene, Stage}, session, Markup} = require("telegraf");
 const {textGreetings, actives, checkTown, textTown, textInstruction, textCashback, textFriend, textDeposit, textBonuses} = require("./const.js")
 require("dotenv").config();
-
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const BOT_TOKEN = "5134019924:AAE_MfqsbhA4QeeldRE1v3H9SGmr-a4I074";
+const bot = new Telegraf(BOT_TOKEN);
 
 bot.start(async ctx => {
     return await ctx.replyWithHTML(textGreetings, actives.greetings);
